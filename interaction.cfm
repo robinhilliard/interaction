@@ -1,23 +1,37 @@
 <!---
-	Render a UML interaction diagram using pseudocode syntax in the tag body:
+   Render a UML interaction diagram using pseudocode syntax in the tag body:
 
-	key caption         Column declarations. Capitalised key starts instantiated (solid line)
-	Key caption
-	key caption
-						Empty line to finish column declarations
-	key label {         Synchronous call (filled arrow), label can contain spaces and "\" for additional lines
-	key! label {        Asynchronous call (hollow arrow)
-	! label {           Asynchronous call/message to right side of diagram
-	return label        Optional return (hollow dashed arrow) back to caller
-	}                   pass execution back to caller
-	...                 Add space
-	///                 Time passes marker
-	label               Column calling itself
-	#comment            hash must be first character, end of line comments not supported
+   key caption         Column declarations. Capitalised key starts instantiated (solid line)
+   Key caption
+   key caption
+                    Empty line to finish column declarations
+   key label {         Synchronous call (filled arrow), label can contain spaces and "\" for additional lines
+   key! label {        Asynchronous call (hollow arrow)
+   ! label {           Asynchronous call/message to right side of diagram
+   return label        Optional return (hollow dashed arrow) back to caller
+   }                   pass execution back to caller
+   ...                 Add space
+   ///                 Time passes marker
+   label               Column calling itself
+   #comment            hash must be first character, end of line comments not supported
 
-	(c) RocketBoots 2014
+   (c) RocketBoots 2014
 
-	@see http://www.ibm.com/developerworks/rational/library/3101.html
+   Interaction is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Lesser General Public License as
+   published by the Free Software Foundation, either version 3 of
+   the License, or (at your option) any later version.
+
+   Interaction is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU Lesser General Public License for more details.
+
+   You should have received a copy of the GNU Lesser General Public
+   License along with Pattern.  If not, see
+   <http://www.gnu.org/licenses/>.
+
+   @see http://www.ibm.com/developerworks/rational/library/3101.html
  --->
 <cfscript>
 if (thistag.executionMode eq "end") {
